@@ -8,4 +8,43 @@
 
 * ref获取组件实例的作用
 
+## 自定义组件举例（LazyLoad）
+
+    1. 高阶组件  高阶函数
+    2. 实现按需加载，动态import和SplitChunksPlugin
+
+    code：
+
+        function LazyLoad(options){
+            return class extends Component{
+                constructor(){
+                    super()
+                    this.state={
+                        component:null,
+                        loading: options.loading || <h1>loading</h1>
+                    }
+                }
+                render(){
+                    let {component,loading} = this.state;
+                    return component || loading
+                }
+                componentDidMount(){
+                    options.component().then(o=>{
+                        this.setState({
+                            component:<o.default></o.default>
+                        })
+                    })
+                }
+            }
+        }
+
+    useage：
+
+        import LazyLoad from './components/LazyLoad/LazyLoad.jsx';
+        import Loading from './components/Loading/Loading.jsx';
+        let Index = LazyLoad({
+            component:()=>import(/* webpackChunkName: 'index' */ './pages/Index/Index.jsx'),
+            loading:<Loading></Loading>
+        })
+
 * 掌握原理，黑猫白猫抓住老鼠就是好猫
