@@ -47,4 +47,6 @@
             loading:<Loading></Loading>
         })
 
+        <Route path="/" exact component={Index}></Route>
+
 * 掌握原理，黑猫白猫抓住老鼠就是好猫
