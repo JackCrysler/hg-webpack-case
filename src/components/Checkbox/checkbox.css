@@ -1,0 +1,25 @@
+.checkbox {
+  width: .25rem;
+  height: .25rem;
+  border: 1px solid #b3b3b3;
+  border-radius: 50%;
+}
+
+.checked {
+  width: .25rem;
+  height: .25rem;
+  border: 1px solid #ffbc1b;
+  border-radius: 50%;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checked:after {
+  content: '';
+  display: block;
+  width: .12rem;
+  height: .12rem;
+  background: #ffbc1b;
+  border-radius: 50%;
+}

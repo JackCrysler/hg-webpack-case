@@ -1,0 +1,73 @@
+.masker{
+    position: fixed;
+    width: 100%;height: 100%;
+    top: 0;left: 0;
+    background: rgba(0,0,0,.7) !important;
+    z-index: 999999;
+}
+.dialog-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    width: 80%;
+    line-height: 45px;
+    min-height: 100px;
+    background: #fff;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.dialog-title{
+    border-bottom: 1px solid #ccc;
+}
+.dialog-add{
+    border: 1px dashed pink;
+    margin: 3px 0;
+}
+.dialog-item{
+    display: flex;
+    align-items: center;
+}
+.item-msg{
+    flex: 1;
+    text-align: left;
+    text-indent: 10px;
+}
+.delete-item{
+    width: 20px;height: 20px;
+    border-radius: 100%;
+    background: #eee;
+    text-align: center;
+    line-height: 20px;
+    color: #fff; 
+}
+.dialog-btns{
+    
+    padding: 2px 0;
+    display: flex;
+    margin: 2px 0;
+    justify-content: space-around;
+    align-items: center;
+}
+.dialog-btns button{
+    outline: none;
+    line-height: 38px;
+    border-radius: 3px; 
+    
+}
+.dialog-cancel{
+    width: 45%;
+    color: #ccc;
+    background: #fff;
+    border: 1px solid #eee;
+
+}
+.dialog-save{
+    width: 40%;
+    background: orange;
+    color: #333;
+    border: none;
+}
